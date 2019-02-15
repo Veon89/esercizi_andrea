@@ -10,6 +10,7 @@ var controller = require('./controller.js');
 router
     .get('/',controller.hello)
     .get('/secondpage',controller.secondpage)
-    .get('/secondpage/back',controller.back);
+    .get('/secondpage/back',controller.back)
+    .get('/lastname/:lastname',controller.lastname);
 
 module.exports = router;

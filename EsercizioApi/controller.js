@@ -19,9 +19,14 @@ var querystring = require('querystring');
  exports.lastname=function(req,res){
     var lastname = req.params.lastname;
     res.send("il mio cognome è " +lastname);
-    
  }
+exports.id=function(req,res){
+    var user_id = req.body.id;
+    var token = req.body.token;
+    var geo = req.body.geo;
 
+    res.send(user_id + ' ' + token + ' ' + geo);
+}
 
 
 

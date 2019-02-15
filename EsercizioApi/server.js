@@ -1,9 +1,14 @@
 var express = require('express');
 var app = express();
 var router = require('./router.js');
-app.use('/api/',router);
+var bodyParser = require('body-parser');
 
-app.listen(8080, function () {
-  console.log('Example app listening on port 8080!');
+
+app.use('/api/',router);
+app.use(bodyParser.json()); // support json encoded bodies
+app.use(bodyParser.urlencoded({ extended: true })); // support encoded bodies
+
+app.listen(1337, function () {
+  console.log('Example app listening on port 1337!');
 });
 
